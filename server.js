@@ -7,6 +7,13 @@ const modemailer = require('nodemailer');
 // step 1
 
 // transporter
+// var transporter = nodemailer.createTransport({
+//     service: '',
+//     auth: {
+//       user: '',
+//       pass: ''
+//     }
+//   });
 
 const nodemailer = require('nodemailer');
 
@@ -29,7 +36,14 @@ async function main() {
         }
     });
 
-
+//step 2
+// var mailOptions = {
+//     from: '',
+//     to: '',
+//     subject: '',
+//     text: ``
+//   };
+  
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
@@ -49,3 +63,13 @@ async function main() {
 }
 
 main().catch(console.error);
+
+
+//step 3 gmail
+// transporter.sendMail(mailOptions, function(error, info){
+//     if (error) {
+//       console.log(error);
+//     } else {
+//       console.log('Email sent: ' + info.response);
+//     }
+//   });
